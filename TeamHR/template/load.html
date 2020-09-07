@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    </head>
+    <body>
+        <form method="POST" action="{% url 'loading' %}">
+            {% csrf_token %}
+            <div class="container jumbotron">
+                <div class="form-group" >
+                    <label for="wall_id">Wallet ID</label>
+                    <input type="text" class="form-control" id="wall_id" placeholder="Enter ID" name="id"/>
+                    <label for="user_name">User Name</label>
+                    <input type="text" class="form-control" id="user_name" placeholder="Enter User Name" name="name"/>
+                    <p></p>
+                    <input type="submit" class="btn btn-outline-success " value="Load" name="loading"/>
+                    
+                    
+    
+                </div>
+            </div>
+        </form>
+       
+      
+    </body>
+    
+</html>
